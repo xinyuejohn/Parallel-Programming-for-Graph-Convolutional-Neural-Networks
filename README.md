@@ -32,6 +32,17 @@ Using openMP, MPI and SIMD intrinsics to accelerate the straight-forward sequent
 
   **This Optimization is added in the previous submitted 'gcn_omp.cpp'(can be seen in 'gcn_omp.cpp' in the current folder) and leads to speed up of 83-84 combined with openMP**
 
+
+# OpenMP Optimization
+ * **Implementation**
+ using the following clause to parallelize 
+```
+#pragma omp parallel for 
+#pragma omp parallel for private()
+#pragma omp parallel for private() reduction()
+
+```
+
 # MPI Optimization
 
   * **Goal**
